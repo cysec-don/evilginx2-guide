@@ -1,3 +1,7 @@
+<div align="center">
+
+![Book Cover](cover.png)
+
 # A Student's Guide to Evilginx2
 
 **A comprehensive and approachable guide to understanding man-in-the-middle phishing attacks, session hijacking, and how to defend against them.**
@@ -5,6 +9,10 @@
 > **Author:** Cysec Don | cysecdon@gmail.com
 > **Year:** 2026
 > **Edition:** Enhanced Edition v3.0
+
+[![Download PDF](https://img.shields.io/badge/Download-PDF-teal?style=for-the-badge&logo=adobe-acrobat-reader&logoColor=white&color=2a9d8f)](./students_guide_to_evilginx2.pdf)
+
+</div>
 
 ---
 
@@ -38,6 +46,7 @@ This book provides a detailed, student-friendly exploration of Evilginx2 — an 
 ```
 evilginx2-guide/
 ├── students_guide_to_evilginx2.pdf   # The complete book (PDF)
+├── cover.png                         # Book cover image (PNG)
 ├── generate_guide.py                  # Python script to generate the body PDF
 ├── cover.html                         # Cover page (HTML with HUD theme)
 ├── cover_bg.png                       # AI-generated cover background
