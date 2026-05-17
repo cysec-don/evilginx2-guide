@@ -9,11 +9,20 @@
 @page { size: 794px 1123px; margin: 0; }
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
+/* ━━ Color Palette: Deep Ocean Midnight ━━
+   BG:       #0f1923  (deep midnight blue-charcoal)
+   ACCENT:   #5b8fa8  (muted steel teal — soft, no eye strain)
+   ACCENT2:  #3d6e84  (deeper teal for subtle elements)
+   TEXT:     #c9d4de  (soft silver — not pure white)
+   MUTED:    #7b8a96  (cool grey for secondary text)
+   SURFACE:  rgba(91,143,168,0.06) (barely-there teal tint)
+*/
+
 body {
   width: 794px;
   height: 1123px;
   font-family: 'Inter', sans-serif;
-  background: #0a0e17;
+  background: #0f1923;
   overflow: hidden;
 }
 
@@ -28,8 +37,8 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  opacity: 0.35;
-  filter: brightness(0.7) contrast(1.2);
+  opacity: 0.22;
+  filter: brightness(0.55) contrast(1.05) saturate(0.7);
 }
 
 /* ━━ Layer 1: Dark overlay with gradient ━━ */
@@ -38,16 +47,16 @@ body {
   inset: 0;
   background:
     linear-gradient(180deg,
-      rgba(10, 14, 23, 0.92) 0%,
-      rgba(10, 14, 23, 0.55) 35%,
-      rgba(10, 14, 23, 0.45) 55%,
-      rgba(10, 14, 23, 0.88) 80%,
-      rgba(10, 14, 23, 0.97) 100%
+      rgba(15, 25, 35, 0.94) 0%,
+      rgba(15, 25, 35, 0.50) 32%,
+      rgba(15, 25, 35, 0.40) 55%,
+      rgba(15, 25, 35, 0.85) 78%,
+      rgba(15, 25, 35, 0.97) 100%
     );
   z-index: 1;
 }
 
-/* ━━ Layer 2: HUD grid lines ━━ */
+/* ━━ Layer 2: Subtle grid lines ━━ */
 .hud-grid {
   position: absolute;
   inset: 0;
@@ -61,8 +70,8 @@ body {
   position: absolute;
   inset: 0;
   background-image:
-    repeating-linear-gradient(0deg, rgba(0, 212, 255, 0.03) 0px, rgba(0, 212, 255, 0.03) 0.5px, transparent 0.5px, transparent 48px),
-    repeating-linear-gradient(90deg, rgba(0, 212, 255, 0.03) 0px, rgba(0, 212, 255, 0.03) 0.5px, transparent 0.5px, transparent 48px);
+    repeating-linear-gradient(0deg, rgba(91, 143, 168, 0.025) 0px, rgba(91, 143, 168, 0.025) 0.5px, transparent 0.5px, transparent 52px),
+    repeating-linear-gradient(90deg, rgba(91, 143, 168, 0.025) 0px, rgba(91, 143, 168, 0.025) 0.5px, transparent 0.5px, transparent 52px);
 }
 
 /* ━━ Layer 3: Structural elements ━━ */
@@ -73,20 +82,20 @@ body {
   pointer-events: none;
 }
 
-/* Thick left accent bar */
+/* Left accent bar — soft muted teal, no glow */
 .accent-bar {
   position: absolute;
   left: 72px;
   top: 0;
-  width: 5px;
+  width: 4px;
   height: 1123px;
   background: linear-gradient(180deg,
     transparent 0%,
-    #00d4ff 8%,
-    #00d4ff 92%,
+    #5b8fa8 10%,
+    #5b8fa8 90%,
     transparent 100%
   );
-  box-shadow: 0 0 12px rgba(0, 212, 255, 0.5), 0 0 30px rgba(0, 212, 255, 0.2);
+  opacity: 0.6;
 }
 
 /* Top HUD bracket */
@@ -95,19 +104,19 @@ body {
   right: 60px;
   top: 40px;
   width: 200px;
-  height: 30px;
-  border-top: 1px solid rgba(0, 212, 255, 0.4);
-  border-right: 1px solid rgba(0, 212, 255, 0.4);
+  height: 28px;
+  border-top: 1px solid rgba(91, 143, 168, 0.25);
+  border-right: 1px solid rgba(91, 143, 168, 0.25);
 }
 
 .hud-bracket-bottom {
   position: absolute;
   left: 108px;
   bottom: 100px;
-  width: 320px;
-  height: 30px;
-  border-bottom: 1px solid rgba(0, 212, 255, 0.3);
-  border-left: 1px solid rgba(0, 212, 255, 0.3);
+  width: 300px;
+  height: 28px;
+  border-bottom: 1px solid rgba(91, 143, 168, 0.2);
+  border-left: 1px solid rgba(91, 143, 168, 0.2);
 }
 
 /* Horizontal separator line */
@@ -115,9 +124,9 @@ body {
   position: absolute;
   left: 108px;
   top: 730px;
-  width: 560px;
+  width: 540px;
   height: 1px;
-  background: linear-gradient(90deg, rgba(0, 212, 255, 0.6), rgba(0, 212, 255, 0.1), transparent);
+  background: linear-gradient(90deg, rgba(91, 143, 168, 0.35), rgba(91, 143, 168, 0.08), transparent);
 }
 
 /* Corner decorations */
@@ -125,20 +134,20 @@ body {
   position: absolute;
   left: 30px;
   top: 30px;
-  width: 25px;
-  height: 25px;
-  border-top: 2px solid rgba(0, 212, 255, 0.5);
-  border-left: 2px solid rgba(0, 212, 255, 0.5);
+  width: 22px;
+  height: 22px;
+  border-top: 1px solid rgba(91, 143, 168, 0.3);
+  border-left: 1px solid rgba(91, 143, 168, 0.3);
 }
 
 .corner-br {
   position: absolute;
   right: 30px;
   bottom: 30px;
-  width: 25px;
-  height: 25px;
-  border-bottom: 2px solid rgba(0, 212, 255, 0.5);
-  border-right: 2px solid rgba(0, 212, 255, 0.5);
+  width: 22px;
+  height: 22px;
+  border-bottom: 1px solid rgba(91, 143, 168, 0.3);
+  border-right: 1px solid rgba(91, 143, 168, 0.3);
 }
 
 /* ━━ Layer 4: Content ━━ */
@@ -155,12 +164,12 @@ body {
   right: 68px;
   top: 48px;
   font-family: 'JetBrains Mono', monospace;
-  font-size: 8pt;
-  font-weight: 500;
+  font-size: 7.5pt;
+  font-weight: 400;
   letter-spacing: 2pt;
   text-transform: uppercase;
-  color: #00d4ff;
-  opacity: 0.7;
+  color: #7b8a96;
+  opacity: 0.8;
 }
 
 /* Kicker text */
@@ -169,12 +178,12 @@ body {
   left: 108px;
   top: 148px;
   font-family: 'JetBrains Mono', monospace;
-  font-size: 11pt;
+  font-size: 10.5pt;
   font-weight: 500;
   letter-spacing: 4pt;
   text-transform: uppercase;
-  color: #00d4ff;
-  opacity: 0.9;
+  color: #5b8fa8;
+  opacity: 0.85;
 }
 
 /* Version tag */
@@ -183,11 +192,11 @@ body {
   left: 108px;
   top: 178px;
   font-family: 'JetBrains Mono', monospace;
-  font-size: 8pt;
+  font-size: 7.5pt;
   font-weight: 400;
   letter-spacing: 1.5pt;
-  color: #00d4ff;
-  opacity: 0.5;
+  color: #5b8fa8;
+  opacity: 0.45;
   text-transform: uppercase;
 }
 
@@ -199,15 +208,15 @@ body {
   font-family: 'Inter', sans-serif;
   font-size: 56pt;
   font-weight: 900;
-  color: #e8eaf0;
+  color: #c9d4de;
   line-height: 1.08;
   max-width: 560px;
-  text-shadow: 0 0 40px rgba(0, 212, 255, 0.15);
+  text-shadow: none;
 }
 
 .hero-title .highlight {
-  color: #00d4ff;
-  text-shadow: 0 0 20px rgba(0, 212, 255, 0.4), 0 0 60px rgba(0, 212, 255, 0.15);
+  color: #5b8fa8;
+  text-shadow: none;
 }
 
 /* Subtitle / tagline */
@@ -216,10 +225,10 @@ body {
   left: 108px;
   top: 530px;
   font-family: 'Inter', sans-serif;
-  font-size: 15pt;
+  font-size: 14pt;
   font-weight: 400;
-  color: #8b95a8;
-  line-height: 1.5;
+  color: #7b8a96;
+  line-height: 1.55;
   max-width: 500px;
 }
 
@@ -230,16 +239,16 @@ body {
   top: 620px;
   max-width: 520px;
   padding: 16px 20px;
-  border-left: 3px solid rgba(0, 212, 255, 0.6);
-  background: rgba(0, 212, 255, 0.04);
+  border-left: 2px solid rgba(91, 143, 168, 0.35);
+  background: rgba(91, 143, 168, 0.04);
 }
 
 .summary-text {
   font-family: 'Inter', sans-serif;
-  font-size: 10pt;
+  font-size: 9.5pt;
   font-weight: 400;
-  color: #8b95a8;
-  line-height: 1.6;
+  color: #7b8a96;
+  line-height: 1.65;
 }
 
 /* Author section */
@@ -251,27 +260,27 @@ body {
 
 .author-name {
   font-family: 'Inter', sans-serif;
-  font-size: 16pt;
+  font-size: 15pt;
   font-weight: 700;
-  color: #e8eaf0;
+  color: #c9d4de;
   letter-spacing: 0.5pt;
 }
 
 .author-email {
   font-family: 'JetBrains Mono', monospace;
-  font-size: 9pt;
+  font-size: 8.5pt;
   font-weight: 400;
-  color: #00d4ff;
-  opacity: 0.7;
+  color: #5b8fa8;
+  opacity: 0.6;
   margin-top: 4px;
 }
 
 .author-year {
   font-family: 'JetBrains Mono', monospace;
-  font-size: 9pt;
+  font-size: 8.5pt;
   font-weight: 400;
-  color: #8b95a8;
-  opacity: 0.5;
+  color: #7b8a96;
+  opacity: 0.45;
   margin-top: 4px;
 }
 
@@ -281,9 +290,9 @@ body {
   left: 0;
   bottom: 0;
   width: 794px;
-  height: 52px;
-  background: rgba(0, 212, 255, 0.03);
-  border-top: 1px solid rgba(0, 212, 255, 0.15);
+  height: 48px;
+  background: rgba(91, 143, 168, 0.03);
+  border-top: 1px solid rgba(91, 143, 168, 0.1);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -292,14 +301,14 @@ body {
 
 .hud-strip-item {
   font-family: 'JetBrains Mono', monospace;
-  font-size: 7pt;
+  font-size: 6.5pt;
   font-weight: 400;
   letter-spacing: 1.5pt;
   text-transform: uppercase;
-  color: rgba(0, 212, 255, 0.5);
+  color: rgba(91, 143, 168, 0.4);
 }
 
-/* Scan line effect */
+/* Scan line effect — very subtle */
 .scanline {
   position: absolute;
   inset: 0;
@@ -308,9 +317,9 @@ body {
   background: repeating-linear-gradient(
     0deg,
     transparent 0px,
-    transparent 2px,
-    rgba(0, 0, 0, 0.03) 2px,
-    rgba(0, 0, 0, 0.03) 4px
+    transparent 3px,
+    rgba(0, 0, 0, 0.015) 3px,
+    rgba(0, 0, 0, 0.015) 6px
   );
 }
 
@@ -332,7 +341,7 @@ body {
 
   <!-- Layer 0: AI-generated background -->
   <div class="cover-bg-image">
-    <img src="cover_bg.png" />
+    <img src="cover_bg_v2.png" />
   </div>
 
   <!-- Layer 1: Dark gradient overlay -->
