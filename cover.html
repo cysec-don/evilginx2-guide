@@ -9,20 +9,20 @@
 @page { size: 794px 1123px; margin: 0; }
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
-/* ━━ Color Palette: Deep Ocean Midnight ━━
-   BG:       #0f1923  (deep midnight blue-charcoal)
-   ACCENT:   #5b8fa8  (muted steel teal — soft, no eye strain)
-   ACCENT2:  #3d6e84  (deeper teal for subtle elements)
-   TEXT:     #c9d4de  (soft silver — not pure white)
-   MUTED:    #7b8a96  (cool grey for secondary text)
-   SURFACE:  rgba(91,143,168,0.06) (barely-there teal tint)
+/* ━━ Color Palette: Cool Blue Frost ━━
+   BG:       #0b1628  (deep navy night)
+   ACCENT:   #4a90c4  (cool steel blue — signature color)
+   ACCENT2:  #2e6da4  (deeper blue for subtle elements)
+   ACCENT3:  #6db3d8  (frost highlight — sparingly used)
+   TEXT:     #c8d8e8  (cool ice white)
+   MUTED:    #7a96b0  (slate blue grey)
 */
 
 body {
   width: 794px;
   height: 1123px;
   font-family: 'Inter', sans-serif;
-  background: #0f1923;
+  background: #0b1628;
   overflow: hidden;
 }
 
@@ -37,8 +37,8 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  opacity: 0.22;
-  filter: brightness(0.55) contrast(1.05) saturate(0.7);
+  opacity: 0.25;
+  filter: brightness(0.5) contrast(1.08) saturate(0.6);
 }
 
 /* ━━ Layer 1: Dark overlay with gradient ━━ */
@@ -47,11 +47,11 @@ body {
   inset: 0;
   background:
     linear-gradient(180deg,
-      rgba(15, 25, 35, 0.94) 0%,
-      rgba(15, 25, 35, 0.50) 32%,
-      rgba(15, 25, 35, 0.40) 55%,
-      rgba(15, 25, 35, 0.85) 78%,
-      rgba(15, 25, 35, 0.97) 100%
+      rgba(11, 22, 40, 0.95) 0%,
+      rgba(11, 22, 40, 0.48) 30%,
+      rgba(11, 22, 40, 0.38) 55%,
+      rgba(11, 22, 40, 0.82) 78%,
+      rgba(11, 22, 40, 0.97) 100%
     );
   z-index: 1;
 }
@@ -70,8 +70,8 @@ body {
   position: absolute;
   inset: 0;
   background-image:
-    repeating-linear-gradient(0deg, rgba(91, 143, 168, 0.025) 0px, rgba(91, 143, 168, 0.025) 0.5px, transparent 0.5px, transparent 52px),
-    repeating-linear-gradient(90deg, rgba(91, 143, 168, 0.025) 0px, rgba(91, 143, 168, 0.025) 0.5px, transparent 0.5px, transparent 52px);
+    repeating-linear-gradient(0deg, rgba(74, 144, 196, 0.025) 0px, rgba(74, 144, 196, 0.025) 0.5px, transparent 0.5px, transparent 52px),
+    repeating-linear-gradient(90deg, rgba(74, 144, 196, 0.025) 0px, rgba(74, 144, 196, 0.025) 0.5px, transparent 0.5px, transparent 52px);
 }
 
 /* ━━ Layer 3: Structural elements ━━ */
@@ -82,7 +82,7 @@ body {
   pointer-events: none;
 }
 
-/* Left accent bar — soft muted teal, no glow */
+/* Left accent bar */
 .accent-bar {
   position: absolute;
   left: 72px;
@@ -91,11 +91,11 @@ body {
   height: 1123px;
   background: linear-gradient(180deg,
     transparent 0%,
-    #5b8fa8 10%,
-    #5b8fa8 90%,
+    #4a90c4 10%,
+    #4a90c4 90%,
     transparent 100%
   );
-  opacity: 0.6;
+  opacity: 0.55;
 }
 
 /* Top HUD bracket */
@@ -105,8 +105,8 @@ body {
   top: 40px;
   width: 200px;
   height: 28px;
-  border-top: 1px solid rgba(91, 143, 168, 0.25);
-  border-right: 1px solid rgba(91, 143, 168, 0.25);
+  border-top: 1px solid rgba(74, 144, 196, 0.22);
+  border-right: 1px solid rgba(74, 144, 196, 0.22);
 }
 
 .hud-bracket-bottom {
@@ -115,8 +115,8 @@ body {
   bottom: 100px;
   width: 300px;
   height: 28px;
-  border-bottom: 1px solid rgba(91, 143, 168, 0.2);
-  border-left: 1px solid rgba(91, 143, 168, 0.2);
+  border-bottom: 1px solid rgba(74, 144, 196, 0.18);
+  border-left: 1px solid rgba(74, 144, 196, 0.18);
 }
 
 /* Horizontal separator line */
@@ -126,7 +126,7 @@ body {
   top: 730px;
   width: 540px;
   height: 1px;
-  background: linear-gradient(90deg, rgba(91, 143, 168, 0.35), rgba(91, 143, 168, 0.08), transparent);
+  background: linear-gradient(90deg, rgba(74, 144, 196, 0.3), rgba(74, 144, 196, 0.06), transparent);
 }
 
 /* Corner decorations */
@@ -136,8 +136,8 @@ body {
   top: 30px;
   width: 22px;
   height: 22px;
-  border-top: 1px solid rgba(91, 143, 168, 0.3);
-  border-left: 1px solid rgba(91, 143, 168, 0.3);
+  border-top: 1px solid rgba(74, 144, 196, 0.25);
+  border-left: 1px solid rgba(74, 144, 196, 0.25);
 }
 
 .corner-br {
@@ -146,8 +146,8 @@ body {
   bottom: 30px;
   width: 22px;
   height: 22px;
-  border-bottom: 1px solid rgba(91, 143, 168, 0.3);
-  border-right: 1px solid rgba(91, 143, 168, 0.3);
+  border-bottom: 1px solid rgba(74, 144, 196, 0.25);
+  border-right: 1px solid rgba(74, 144, 196, 0.25);
 }
 
 /* ━━ Layer 4: Content ━━ */
@@ -168,8 +168,8 @@ body {
   font-weight: 400;
   letter-spacing: 2pt;
   text-transform: uppercase;
-  color: #7b8a96;
-  opacity: 0.8;
+  color: #7a96b0;
+  opacity: 0.75;
 }
 
 /* Kicker text */
@@ -182,7 +182,7 @@ body {
   font-weight: 500;
   letter-spacing: 4pt;
   text-transform: uppercase;
-  color: #5b8fa8;
+  color: #4a90c4;
   opacity: 0.85;
 }
 
@@ -195,8 +195,8 @@ body {
   font-size: 7.5pt;
   font-weight: 400;
   letter-spacing: 1.5pt;
-  color: #5b8fa8;
-  opacity: 0.45;
+  color: #4a90c4;
+  opacity: 0.4;
   text-transform: uppercase;
 }
 
@@ -208,15 +208,13 @@ body {
   font-family: 'Inter', sans-serif;
   font-size: 56pt;
   font-weight: 900;
-  color: #c9d4de;
+  color: #c8d8e8;
   line-height: 1.08;
   max-width: 560px;
-  text-shadow: none;
 }
 
 .hero-title .highlight {
-  color: #5b8fa8;
-  text-shadow: none;
+  color: #6db3d8;
 }
 
 /* Subtitle / tagline */
@@ -227,7 +225,7 @@ body {
   font-family: 'Inter', sans-serif;
   font-size: 14pt;
   font-weight: 400;
-  color: #7b8a96;
+  color: #7a96b0;
   line-height: 1.55;
   max-width: 500px;
 }
@@ -239,15 +237,15 @@ body {
   top: 620px;
   max-width: 520px;
   padding: 16px 20px;
-  border-left: 2px solid rgba(91, 143, 168, 0.35);
-  background: rgba(91, 143, 168, 0.04);
+  border-left: 2px solid rgba(74, 144, 196, 0.3);
+  background: rgba(74, 144, 196, 0.035);
 }
 
 .summary-text {
   font-family: 'Inter', sans-serif;
   font-size: 9.5pt;
   font-weight: 400;
-  color: #7b8a96;
+  color: #7a96b0;
   line-height: 1.65;
 }
 
@@ -262,7 +260,7 @@ body {
   font-family: 'Inter', sans-serif;
   font-size: 15pt;
   font-weight: 700;
-  color: #c9d4de;
+  color: #c8d8e8;
   letter-spacing: 0.5pt;
 }
 
@@ -270,7 +268,7 @@ body {
   font-family: 'JetBrains Mono', monospace;
   font-size: 8.5pt;
   font-weight: 400;
-  color: #5b8fa8;
+  color: #4a90c4;
   opacity: 0.6;
   margin-top: 4px;
 }
@@ -279,8 +277,8 @@ body {
   font-family: 'JetBrains Mono', monospace;
   font-size: 8.5pt;
   font-weight: 400;
-  color: #7b8a96;
-  opacity: 0.45;
+  color: #7a96b0;
+  opacity: 0.4;
   margin-top: 4px;
 }
 
@@ -291,8 +289,8 @@ body {
   bottom: 0;
   width: 794px;
   height: 48px;
-  background: rgba(91, 143, 168, 0.03);
-  border-top: 1px solid rgba(91, 143, 168, 0.1);
+  background: rgba(74, 144, 196, 0.025);
+  border-top: 1px solid rgba(74, 144, 196, 0.1);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -305,10 +303,10 @@ body {
   font-weight: 400;
   letter-spacing: 1.5pt;
   text-transform: uppercase;
-  color: rgba(91, 143, 168, 0.4);
+  color: rgba(74, 144, 196, 0.35);
 }
 
-/* Scan line effect — very subtle */
+/* Scan line effect */
 .scanline {
   position: absolute;
   inset: 0;
@@ -318,8 +316,8 @@ body {
     0deg,
     transparent 0px,
     transparent 3px,
-    rgba(0, 0, 0, 0.015) 3px,
-    rgba(0, 0, 0, 0.015) 6px
+    rgba(0, 0, 0, 0.012) 3px,
+    rgba(0, 0, 0, 0.012) 6px
   );
 }
 
@@ -341,7 +339,7 @@ body {
 
   <!-- Layer 0: AI-generated background -->
   <div class="cover-bg-image">
-    <img src="cover_bg_v2.png" />
+    <img src="cover_bg_v3.png" />
   </div>
 
   <!-- Layer 1: Dark gradient overlay -->
